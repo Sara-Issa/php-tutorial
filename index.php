@@ -1,6 +1,6 @@
 <?php 
 
-// indexed array
+// indexed array Array
 
 // they are called indexed arrays because when 
 // we want to access it we use the array index they have
@@ -28,7 +28,7 @@ $peopleThree = array_merge($peopleOne, $peopleTwo);
 //print_r($peopleThree);
 
 
-// associative array (key => value)
+// associative array (key => value) Object
 
 $ninjasOne = ['shaun' => 'crystal' , 'ryu' => 'luke' , 'adam' => 'darek'];
 //echo $ninjasOne['shaun'];
@@ -43,7 +43,7 @@ $ninjaThree = array_merge($ninjasOne, $ninjaTwo);
 
 
 
-// multi-dimentional arrays
+// multi-dimentional arrays (Array with Objects inside it)
 $blogs = [
     ['title','James' , 'lorem', 30],
     ['How to practice JavaSript', 'Jemmy', 'lorem', 102],
@@ -64,7 +64,38 @@ $blog[] = [ 'title' => 'How to manage a PR company', 'auther' => 'Darek' , 'cont
 //print_r($blog);
 
 array_pop($blog);
-print_r($blog);
+//print_r($blog);
+
+
+$ninjas = ['shaun', 'ryu', 'yoshi'];
+
+// for ($i = 0; $i < count($ninjas); $i++) {
+//      echo $ninjas[$i] . '<br />';
+// }
+
+// foreach($ninjas as $ninja){
+//     echo $ninja . '<br />';
+// };
+
+
+$products = [
+    ['name' => 'Shiny star', 'price' => '20'],
+    ['name' => 'green shell', 'price' => '10'],
+    ['name' => 'red shell', 'price' => '15'],
+    ['name' => 'gold coin', 'price' => '5'],
+    ['name' => 'lightning bolt', 'price' => '40'],
+    ['name' => 'banana Skin', 'price' => '2']
+];
+
+
+// foreach($products as $product){
+//     echo $product['name'] . ' - ' . $product['price'];
+//     echo '<br />';
+// }
+
+
+
+
 
 ?>
 
@@ -74,6 +105,17 @@ print_r($blog);
     <title>my first PHP file</title>
 </head>
 <body>
+
+
+
+
+<!-- <h1>Products</h1> -->
+<!-- <ul> -->
+    <!-- <?php foreach($products as $product){ ?> -->
+        <!-- <h3><?php  echo $product['name'] ?></h3> -->
+        <!-- <p>$<?php echo $product['price']?></p> -->
+    <!-- <?php } ?> -->
+<!-- </ul> -->
 
 </body>
 </html> 
