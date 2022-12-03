@@ -1,4 +1,6 @@
 <?php
+
+ include('config/db_connect.php');
 // when the method is GET
 //   if(isset($_GET['submit'])){
 //     echo $_GET['email'];
@@ -52,8 +54,22 @@
 		if(array_filter($errors)){
 			// echo 'there are errors in the form';
 		} else {
-			// echo 'form is valid';
+			$email = mysqli_real_escape_string($conn, $_POST['email']);
+			$title = mysqli_real_escape_string($conn, $_POST['title']);
+			$ingredients = mysqli_real_escape_string($conn, $_POST['ingredients']);
+
+			// create sql
+			$sql = "INSERT INTO pizzas(title,email,ingredients) VALUES('$title', '$email', '$ingredients')";
+
+			// save to db
+			if(mysqli_query($conn, $sql)){
+				// success;
+				// echo 'form is valid';
 			header('Location: index.php');
+			} else {
+				// error
+				echo 'query error: ' . mysqli_error($conn);
+			}
 		}
   } // end POST check
 
