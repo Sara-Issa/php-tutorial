@@ -3,7 +3,7 @@
 include('config/db_connect.php');
 
 // write query for all pizzas
-$sql = 'SELECT title, ingredients, id FROM pizzas';
+$sql = "SELECT title, ingredients, id FROM pizzas";
 
 // make query and get result
 $result = mysqli_query($conn, $sql);
